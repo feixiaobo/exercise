@@ -1,7 +1,7 @@
 package exercise.interceptor;
 
 import com.alibaba.fastjson.JSON;
-import exercise.Holder.ResponseHolder;
+import exercise.holder.ResponseHolder;
 import exercise.enums.ErrorMsg;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

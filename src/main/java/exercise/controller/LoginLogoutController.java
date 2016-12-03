@@ -1,6 +1,6 @@
 package exercise.controller;
 
-import exercise.Holder.ResponseHolder;
+import exercise.holder.ResponseHolder;
 import exercise.enums.ErrorMsg;
 import exercise.model.ExeUserDetail;
 import exercise.session.CurrentUser;

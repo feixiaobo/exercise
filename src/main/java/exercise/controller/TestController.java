@@ -1,9 +1,7 @@
 package exercise.controller;
 
-import exercise.Holder.ResponseHolder;
-import exercise.enums.ErrorMsg;
+import exercise.holder.ResponseHolder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

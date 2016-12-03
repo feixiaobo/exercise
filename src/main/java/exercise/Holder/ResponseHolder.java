@@ -1,4 +1,4 @@
-package exercise.Holder;
+package exercise.holder;
 
 import exercise.enums.ErrorMsg;
 import exercise.model.ResponseModel;
