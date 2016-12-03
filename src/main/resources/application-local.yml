@@ -4,7 +4,7 @@ application:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/o2o?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://127.0.0.1:3306/exercise?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
     username: feixaiobo
     password: feixiaobo
     initialSize: 10
