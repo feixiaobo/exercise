@@ -17,8 +17,8 @@ public class GetPDF {
     private static final String fontPath = "/Users/feixiaobo/Desktop/simsun.ttf";
 
     public static void main(String[] args) throws IOException {
-        String html = "/Users/feixiaobo/Desktop/ruiyinBusiness.html";
-        String pdf = "/Users/feixiaobo/Desktop/ruiyinBusiness.pdf";
+        String html = "/Users/feixiaobo/Desktop/test.html";
+        String pdf = "/Users/feixiaobo/Desktop/test.pdf";
         File pdfFile = new File(pdf);
         InputStream inputStream = htmlToPDF(new FileInputStream(new File(html)));
         try{

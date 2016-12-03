@@ -21,7 +21,7 @@ public class FindKeyWords {
     static int i = 0;
 
     public static void main(String[] args) throws IOException {
-        String filePath = "/Users/feixiaobo/Desktop/ruiyin.pdf";
+        String filePath = "/Users/feixiaobo/Desktop/test.pdf";
         List list = getKeyWords(filePath);
         System.out.println(list);
     }
@@ -48,7 +48,6 @@ public class FindKeyWords {
                         result[1] = boundingRecatnge.y;
                         result[2] = i;
                         list.add(String.format("%s,%s,%s   ", result[0], result[1], result[2]));
-                        //list.add(StringUtils.join(result[0],result[1],result[2]));
                     }
 
                 }

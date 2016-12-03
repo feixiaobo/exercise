@@ -12,7 +12,7 @@ import java.util.Map;
 public class ResponseModel {
     public static final int SUCCESS = 200;
 
-    public static final int ERROR = 300;
+    public static final int ERROR = 100;
 
     private Integer status;
 
