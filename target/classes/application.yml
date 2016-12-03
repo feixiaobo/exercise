@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: exexrcise
+  aop:
+    auto: true
+server:
+  context-path: /exexrcise
+security:
+  basic:
+    enabled: false
+#dubbo
+dubbo:
+  active: true
+  application:
+    name: ${spring.application.name}
+  registry:
+    protocol: zookeeper
+    client: curator
+  protocol:
+    name: dubbo
+    host: 127.0.0.1
+  provider:
+    version: 1.0.0
+    timeout: 30000
+    retries: 0
+    loadbalance: random

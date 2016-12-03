@@ -1,0 +1,55 @@
+application:
+  mode:
+    dev: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #driverClassName: org.mariadb.jdbc.Driver
+    #url: jdbc:mysql://127.0.0.1:3306/o2o?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    #username: o2o
+    #password: weo2o2015
+    url: jdbc:mysql://172.16.2.2:3306/o2o?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: o2o
+    password: weo2o2015
+    initialSize: 10
+    minIdle: 10
+    maxActive: 100
+    maxWait: 6000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #password:
+    #password: dev@3YnUcR7V
+    #pool:
+      #maxActive: 100
+      #maxIdle: 10
+      #maxWait: 100
+      #minIdle: 5
+      #softMinEvictableIdleTimeMillis: 1800000
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+      listener:
+        concurrency: 5
+        max-concurrency: 10
+        requested-heartbeat: 20
+      virtual-host: /
+server:
+  port: 8081
+  context-parameters: swallowOutput=true
+  session:
+    timeout: 6000
+dubbo:
+  registry:
+    address: localhost:2181
