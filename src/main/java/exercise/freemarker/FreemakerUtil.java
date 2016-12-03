@@ -68,19 +68,4 @@ public class FreemakerUtil {
         B b = new B();
         System.out.println(b.getA());
     }
-
-    //    public static void main(String[] args){
-    //        try{
-    //            //URL url = new URL("http://o2o-dev.wecash.net/image/57b5811dfb04d052bdc19dc0");
-    //            URL url = new URL("http://123.56.9.46/image/55e66f3ce4b0b6e13964332a");
-    //            URL url1 =
-    //                HttpClientUtil.DataInputStream dataInputStream = new DataInputStream(url.openStream());
-    //            String imageName = 111 + ".jpg";
-    //            FileOutputStream fileOutputStream = new FileOutputStream(new File(imageName));
-    //            IOUtils.copy(dataInputStream,fileOutputStream);
-    //        }catch (Exception e) {
-    //            e.printStackTrace();
-    //        }
-    //
-    //    }
 }
