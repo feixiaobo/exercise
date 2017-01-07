@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by feixiaobo on 2016/11/25.
@@ -15,14 +16,21 @@ import java.util.Arrays;
 @Service
 public class RedisServiceImpl implements RedisService {
 
+    /**
+     * 缓存失效时间（单位：秒）
+     */
+    private final int EXPIRE = 3 * 60 * 60;
     private Logger logger = LogManager.getLogger(RedisServiceImpl.class);
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     @Override
-    public <K,V> void setObject(K key, V value){
-        redisTemplate.opsForValue().set(key,value);
+    public <K,V> void setObject(K key, V value, Integer timeout){
+        if(timeout == null){
+            timeout = EXPIRE;
+        }
+        redisTemplate.opsForValue().set(key,value, timeout, TimeUnit.SECONDS);
         logger.info("set to redis success!");
     }
 

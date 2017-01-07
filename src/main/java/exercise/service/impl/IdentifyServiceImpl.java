@@ -24,6 +24,10 @@ import java.util.Enumeration;
 @Service
 public class IdentifyServiceImpl extends KaptchaServlet implements IdentifyService {
 
+    /**
+     * 缓存失效时间（单位：秒）
+     */
+    private final int EXPIRE = 30 * 60; //验证码半小时失效
     private Logger logger = LogManager.getLogger(IdentifyServiceImpl.class);
 
     @Autowired
@@ -34,7 +38,7 @@ public class IdentifyServiceImpl extends KaptchaServlet implements IdentifyServi
         super.init(initServletConfig(req));
         super.doGet(req, resp);
         String code = (String) req.getSession().getAttribute("KAPTCHA_SESSION_KEY");
-        redisService.setObject(key,code);
+        redisService.setObject(key,code, EXPIRE);
         logger.info("save code to redis ! key : {}, code : {}",key,code);
         return code;
     }

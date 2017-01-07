@@ -5,7 +5,7 @@ package exercise.service;
  */
 public interface RedisService {
 
-    <K,V> void setObject(K key, V value);
+    <K,V> void setObject(K key, V value, Integer timeout);
 
     <K,V> V getObject(K key);
 

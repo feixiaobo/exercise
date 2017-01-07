@@ -1,5 +1,7 @@
 package exercise;
 
+import exercise.redisManage.TestSubScrtbe;
+import exercise.service.RedisPubService;
 import exercise.service.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,11 +18,20 @@ public class redisTest {
 
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private TestSubScrtbe testSubScrtbe;
+    @Autowired
+    private RedisPubService redisPubService;
 
     @Test
     public void testRedis(){
-        redisService.setObject("test","value");
+        redisService.setObject("test","value",null);
         String value = redisService.getObject("identify_code_register:13521837263");
         System.out.println("++++++++++++"+value);
+    }
+
+    @Test
+    public void testRedisPub(){
+        redisPubService.publishMessage(testSubScrtbe,"test");
     }
 }
