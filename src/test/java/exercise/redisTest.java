@@ -1,6 +1,5 @@
 package exercise;
 
-import exercise.redisManage.TestSubScriber;
 import exercise.service.RedisPubService;
 import exercise.service.RedisService;
 import org.junit.Test;
