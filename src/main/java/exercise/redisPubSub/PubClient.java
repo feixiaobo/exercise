@@ -1,14 +1,12 @@
 package exercise.redisPubSub;
 
 import exercise.utils.Constants;
-import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 
 import java.util.Set;
 
 public class PubClient {
 
-    @Autowired
     private Jedis jedis;
 
     public PubClient(Jedis jedis){
@@ -16,7 +14,8 @@ public class PubClient {
     }
 
     /**
-     * 发布的每条消息，都需要在“订阅者消息队列”中持久
+     * 发布的每条消息，都需要在“订阅者消息队列”中持久化
+     * 将发布者发布的消息持久化到订阅者上
      * @param message
      */
     public void put(String message){

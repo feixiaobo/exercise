@@ -1,8 +1,8 @@
 package exercise.service;
 
-import redis.clients.jedis.JedisPubSub;
+import exercise.redisPubSub.PubSubScriber;
 
 public interface RedisPubService {
 
-    void publishMessage(JedisPubSub jedisPubSub, String message);
+    void publishMessage(PubSubScriber pubSubScriber, String message);
 }

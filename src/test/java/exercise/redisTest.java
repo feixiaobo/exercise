@@ -1,6 +1,6 @@
 package exercise;
 
-import exercise.redisManage.TestSubScrtbe;
+import exercise.redisManage.TestSubScriber;
 import exercise.service.RedisPubService;
 import exercise.service.RedisService;
 import org.junit.Test;
@@ -19,7 +19,7 @@ public class redisTest {
     @Autowired
     private RedisService redisService;
     @Autowired
-    private TestSubScrtbe testSubScrtbe;
+    private TestSubScriber testSubScrtbe;
     @Autowired
     private RedisPubService redisPubService;
 

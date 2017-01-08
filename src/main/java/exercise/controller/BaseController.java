@@ -1,10 +1,10 @@
 package exercise.controller;
 
 import com.alibaba.fastjson.JSON;
-import exercise.holder.ResponseHolder;
 import exercise.enums.ErrorMsg;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import exercise.holder.ResponseHolder;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpStatus;
