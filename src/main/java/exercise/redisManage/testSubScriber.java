@@ -1,6 +1,5 @@
 package exercise.redisManage;
 
-import exercise.redisPubSub.PubSubScriber;
 import exercise.utils.Constants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

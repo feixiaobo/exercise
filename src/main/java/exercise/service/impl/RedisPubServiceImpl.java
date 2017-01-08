@@ -1,7 +1,6 @@
 package exercise.service.impl;
 
 import exercise.redisPubSub.PubClient;
-import exercise.redisPubSub.PubSubScriber;
 import exercise.redisPubSub.SubScriber;
 import exercise.service.RedisPubService;
 import exercise.utils.Constants;
